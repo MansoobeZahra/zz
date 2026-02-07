@@ -62,16 +62,16 @@ export const works = [
     description:
       "A transformer-based model detecting hate speech in Urdu, Roman Urdu, and English texts. Fine-tuned BERT and XLM RoBERTa models to capture linguistic and contextual nuances for precise hate, offensive,and neutral classification.",
     className: "md:col-span-1",
-    image: "/images/works/work1.png",
-    link: "/"
+    image: "/images/works/must-dashboard.jpg",
+    link: "https://mustdashboard.vercel.app/"
   },
   {
     title: "Mine Explorer- The Game of Stones",
     description:
       "AI-powered automation for geological report insights and real-time chatbot assistance for investors and visitors.",
     className: "md:col-span-1",
-    image: "/images/works/work7.png",
-    link: "/"
+    image: "/images/works/gos.jpg",
+    link: "https://gbmining.vercel.app/"
   },
   {
     title: "Diseases Detection and Drug Recommending Model",
