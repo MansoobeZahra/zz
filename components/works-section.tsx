@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { oswald } from "@/data/constants/fonts";
@@ -9,16 +8,14 @@ export default function Works() {
   return (
     <section id="works" className="pb-32">
       <h1
-        className={`${oswald.className} font-semibold text-2xl md:text-4xl flex flex-col text-center`}
+        className={`${oswald.className} font-semibold text-2xl md:text-4xl flex flex-col text-center mb-12`}
       >
-        <span className="text-base text-red-900">Works</span>
+        <span className="text-base text-red-900 mb-2">Portfolio</span>
         <span>
-          <span>Here are</span>{" "}
-          <span className="text-red-600">My Latest Projects</span>
+          Featured <span className="text-red-600">Projects</span>
         </span>
-        <span>with their presentations</span>
       </h1>
-      <BentoGrid className="mx-auto md:auto-rows-[20rem] py-10">
+      <BentoGrid>
         {works.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -26,7 +23,6 @@ export default function Works() {
             link={item.link}
             description={item.description}
             image={item.image}
-            className={cn("md:col-span-1")}
           />
         ))}
       </BentoGrid>
