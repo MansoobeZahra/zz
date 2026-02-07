@@ -94,27 +94,27 @@ export default function HeroSection() {
       {/* Bottom Section: FlipWords + Content */}
       <div className="text-center flex flex-col items-center gap-6 mt-10 px-4 max-w-3xl z-20">
         <h1
-          className={`${ubuntu.className} font-bold text-3xl md:text-5xl flex flex-col leading-tight`}
+          className={`${ubuntu.className} font-bold text-3xl md:text-5xl flex flex-col leading-tight gap-0`}
         >
           <span>
-            From Data to <span className="text-red-700">Development</span>,
+            From Ideas to <span className="text-red-700">Logics</span>,
           </span>
-          <span>
+          <span className="mt-1">
             <span className="text-base md:text-lg font-medium text-black dark:text-[rgb(206,206,206)]">
-              I Craft Intelligent
+              I Develop
             </span>
-            <br />
-            <FlipWords
-              words={[
-                "AI-Powered Systems",
-                "Impactful Web Experiences",
-                "Scalable ML Solutions",
-                "Data-Driven Applications",
-                "Automated Workflows",
-              ]}
-              className="text-[rgb(139,94,41)] dark:text-[#f1b773cb] text-center h-[72px] sm:h-auto transition-all duration-700"
-            />
-            <span className="hidden md:inline">.</span>
+            <div className="mt-4">
+              <FlipWords
+                words={[
+                  "AI-Powered Systems",
+                  "Impactful Web Experiences",
+                  "Scalable ML Solutions",
+                  "Data-Driven Applications",
+                  "Automated Workflows",
+                ]}
+                className="text-[rgb(139,94,41)] dark:text-[#f1b773cb] text-center h-[72px] sm:h-auto transition-all duration-700"
+              />
+            </div>
           </span>
         </h1>
 
