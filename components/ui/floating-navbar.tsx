@@ -130,7 +130,7 @@ export const FloatingNav = ({
         <div className="flex items-center space-x-2">
           <div className="w-4 h-4 bg-red-600 rounded-full"></div>
           <span className="font-semibold text-lg text-red-600 dark:text-red-500">
-            John Doe
+            abbaszayn
           </span>
         </div>
 

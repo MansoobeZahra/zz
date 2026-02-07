@@ -115,12 +115,12 @@ export const socialMedia = [
   {
     id: 2,
     img: <FaGithub />,
-    href: "https://github.com/MansoobeZahra",
+    href: "https://github.com/abbaszaynn",
   },
   {
     id: 3,
     img: <FaInstagram />,
-    href: "https://www.instagram.com/abbas__zayn/",
+    href: "https://www.instagram.com/abbas__zayn?igsh=MWVqb2V0ZjI1cHRucA==",
   },
 ];
 
