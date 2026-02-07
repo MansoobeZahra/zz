@@ -1,53 +1,98 @@
-import Image from "next/image";
-import { ubuntu } from "@/data/constants/fonts";
-import profileImg from "/public/z.png";
+"use client";
+import { motion } from "framer-motion";
+import { ubuntu, playfair } from "@/data/constants/fonts";
 import { FlipWords } from "./ui/flip-words";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    // <section className="w-full flex flex-col items-center justify-center py-28 bg-[#fff8f5] dark:bg-[#0f0f0f] relative overflow-hidden">
-    <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] flex flex-col items-center justify-center py-28 bg-[#fff8f5] dark:bg-[#0f0f0f] overflow-hidden">
+    <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] flex flex-col items-center justify-center min-h-screen py-28 bg-[#fff8f5] dark:bg-[#0f0f0f] overflow-hidden">
 
-      {/* Top Section with Image Centered */}
+      {/* Top Section with Image Centered - Griflan Style */}
       <div className="relative w-full flex items-center justify-center py-10 md:py-16">
-        {/* Background Shape Behind Image */}
-        <div className="absolute w-[340px] h-[340px] md:w-[440px] md:h-[440px] bg-black/80 rounded-full -z-10"></div>
 
-        {/* Left Text */}
-        <div className="absolute left-10 md:left-32 text-left">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
-            I am <br /><span className="text-red-700">John Doe</span>
-          </h1>
-        </div>
+        {/* Center: Griflan-Style Logo + Text */}
+        <div className="flex flex-col items-center justify-center z-30 -mt-16">
+          {/* Z Logo Image with Fire Effect */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="relative cursor-pointer"
+          >
+            {/* Glow effect behind the logo */}
+            <div className="absolute inset-0 blur-3xl opacity-5 bg-gradient-to-b from-orange-500 via-red-600 to-transparent rounded-full transform scale-110" />
 
-        <div className="flex justify-center items-center mx-20 md:mx-40 mb-8">
-          {/* Center Image (Canva-styled) */}
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+              }}
+              transition={{
+                duration: 4,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
+              className="relative"
+            >
+              <Image
+                src="/Z-logo.png"
+                alt="ZIRCON Logo"
+                width={220}
+                height={220}
+                className="object-contain drop-shadow-[0_0_25px_rgba(255,100,0,0.4)]"
+                priority
+              />
+            </motion.div>
+          </motion.div>
 
-          <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 flex justify-center items-center">
-            <Image
-              src={profileImg}
-              alt="profile photo"
-              className="object-contain drop-shadow-[0_0_25px_rgba(255,0,0,0.4)]"
-              fill
-              priority
-            />
-          </div>
-        </div>
+          {/* ZIRCON Text - Griflan Style with Serif Font */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mt-16 relative"
+          >
+            {/* Decorative curved accent above text */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="absolute -top-3 left-1/2 transform -translate-x-1/2"
+            >
+              <svg width="60" height="12" viewBox="0 0 60 12" fill="none" className="opacity-70">
+                <path d="M5 10 Q30 -5 55 10" stroke="#c9a55a" strokeWidth="2" fill="none" strokeLinecap="round" />
+              </svg>
+            </motion.div>
 
+            <h2
+              className={`${playfair.className} text-7xl md:text-9xl font-normal tracking-[0.08em] bg-clip-text relative`}
+              style={{
+                background: "linear-gradient(180deg, #f5f0e6 0%, #c9a55a 50%, #8b7355 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textShadow: "0 0 40px rgba(201, 165, 90, 0.3)",
+              }}
+            >
+              ZIRCON
+            </h2>
 
-
-
-        {/* Right Text */}
-        <div className="absolute right-10 md:right-32 text-right">
-          <p className="text-gray-800 dark:text-gray-300 text-sm md:text-base max-w-xs">
-            AI & Web Developer specialising in crafting accessible, intelligent,
-            and human-centered digital experiences.
-          </p>
+            {/* Decorative curved accent below text */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 1.4, duration: 0.6 }}
+              className="absolute -bottom-3 left-1/2 transform -translate-x-1/2"
+            >
+              <svg width="40" height="10" viewBox="0 0 40 10" fill="none" className="opacity-60">
+                <path d="M5 2 Q20 12 35 2" stroke="#c9a55a" strokeWidth="2" fill="none" strokeLinecap="round" />
+              </svg>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
-      {/* FlipWords + Rest of Content */}
-      <div className="text-center flex flex-col items-center gap-6 mt-10 px-4 max-w-3xl">
+      {/* Bottom Section: FlipWords + Content */}
+      <div className="text-center flex flex-col items-center gap-6 mt-10 px-4 max-w-3xl z-20">
         <h1
           className={`${ubuntu.className} font-bold text-3xl md:text-5xl flex flex-col leading-tight`}
         >

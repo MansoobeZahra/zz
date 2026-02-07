@@ -16,19 +16,19 @@ export const navItems = [
 ];
 
 export const services = [
-   {
-      ico: <Code />,
+  {
+    ico: <Code />,
     title: "AI & Machine Learning Development",
     description:
       "Develop intelligent applications using Python, TensorFlow, and scikit-learn — including image classification, NLP, and predictive models tailored to real-world problems.",
   },
- {
+  {
     ico: <Braces />,
     title: "Full-Stack Web Development",
     description:
       "Develop robust and scalable web applications using modern frameworks like React, Next.js, and Node.js. Focus on creating responsive, user-friendly interfaces with strong backend integration.",
   },
-    {
+  {
     ico: <Blocks />,
     title: "AI-Powered Automation",
     description:
@@ -44,7 +44,7 @@ export const services = [
     ico: <DraftingCompass />,
     title: "System Optimizatoin & APIs",
     description:
-      "Integrate third-party systems, REST APIs, and automation pipelines."+
+      "Integrate third-party systems, REST APIs, and automation pipelines." +
       " Enable your product to connect with CRMs, payment gateways, and AI services efficiently to ensure reliability and scalability.",
   },
   {
