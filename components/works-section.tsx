@@ -8,10 +8,10 @@ export default function Works() {
   return (
     <section id="works" className="pb-32">
       <h1
-        className={`${oswald.className} font-semibold text-2xl md:text-4xl flex flex-col text-center mb-12`}
+        className={`${oswald.className} text-2xl md:text-4xl flex flex-col text-center gap-3 mb-12`}
       >
-        <span className="text-base text-red-900 mb-2">Portfolio</span>
-        <span>
+        <span className="text-base font-light text-red-900">Portfolio</span>
+        <span className="font-semibold">
           Featured <span className="text-red-600">Projects</span>
         </span>
       </h1>
