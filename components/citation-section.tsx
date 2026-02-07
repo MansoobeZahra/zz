@@ -9,10 +9,10 @@ export default function Citation() {
       >
         <Quote className="absolute left-0 -top-5 rotate-180 text-[#f1b773cb]" />
         <span className="text-zinc-500 dark:text-zinc-500">
-          I don&apos;t just think <br className="md:hidden" /> of a solution,
+          I don&apos;t just write code <br className="md:hidden" /> — I architect
         </span>
         <span>
-          I provide the solution <span className="text-red-600">.</span>
+          systems that scale <span className="text-red-600">.</span>
         </span>
         <Quote className="absolute right-0 -bottom-5 text-[#f1b773cb]" />
       </p>

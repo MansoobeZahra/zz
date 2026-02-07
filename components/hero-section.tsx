@@ -106,11 +106,11 @@ export default function HeroSection() {
             <div className="mt-4">
               <FlipWords
                 words={[
-                  "AI-Powered Systems",
-                  "Impactful Web Experiences",
-                  "Scalable ML Solutions",
-                  "Data-Driven Applications",
-                  "Automated Workflows",
+                  "Intelligent Systems",
+                  "Scalable Architectures",
+                  "AI-Driven Solutions",
+                  "Enterprise Platforms",
+                  "Digital Experiences",
                 ]}
                 className="text-[rgb(139,94,41)] dark:text-[#f1b773cb] text-center h-[72px] sm:h-auto transition-all duration-700"
               />

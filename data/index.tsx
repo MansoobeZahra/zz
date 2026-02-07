@@ -125,8 +125,10 @@ export const socialMedia = [
 ];
 
 export const skills = [
-  { name: "AI/ML", description: "", percentage: 88 },
-  { name: "Web Development", description: "", percentage: 75 },
+  { name: "AI/ML", description: "", percentage: 94 },
+  { name: "Systems Architecture", description: "", percentage: 91 },
+  { name: "Web Development", description: "", percentage: 89 },
+  { name: "Cloud & DevOps", description: "", percentage: 92 },
 ];
 
 export const skillsIcons = [

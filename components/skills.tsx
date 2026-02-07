@@ -81,7 +81,7 @@ export default function Skills() {
             ?
           </span>
         </h1>
-        <div className="flex flex-col items-center sm:flex-row gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 gap-8 lg:gap-12">
           {skills.map((skill, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
               <GaugeCircle
@@ -96,7 +96,7 @@ export default function Skills() {
           ))}
         </div>
       </div>
-      <div className="flex max-w-[32rem] items-center justify-center overflow-hidden">
+      <div className="flex max-w-[40rem] items-center justify-center overflow-hidden">
         <IconCloud iconSlugs={skillsIcons} />
       </div>
     </section>
